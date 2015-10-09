@@ -29,7 +29,7 @@
 	//ສ້າງຕາຕະລາງຂໍ້ມູນທີ່ມີຊື່ວ່າ employees
 	
 	$qry = "CREATE TABLE products (
-			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			product_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			pro_name VARCHAR(30) NOT NULL,
 			pro_price INT(11) NOT NULL,
 			cat_id INT(11)
