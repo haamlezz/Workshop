@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	$host = "localhost";
 	//ໂຮສຂອງຖານຂໍ້ມູນ ປົກກະຕິຈະເປັນ localhost
 	
