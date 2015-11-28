@@ -1,0 +1,32 @@
+*{
+    font-family: Phetsarath OT;
+    padding: 0px;
+    margin: auto;
+    color:#333;
+}
+
+a{
+    color:#009999;
+}
+
+a:hover{
+    color:#003333;
+}
+
+.menu{
+    width:100%;
+    background-color: #99ffff;
+    padding-top:20px;
+    padding-bottom: 20px;
+    
+}
+
+.menu a {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    display: block;
+    border-right: solid thin #fff;
+    float: left;
+}
