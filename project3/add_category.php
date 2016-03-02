@@ -13,9 +13,10 @@
 <link href="bootstrap.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+  <?php require 'menu.php';?>
 <div class="container">
+
 <div class="row">
-</div>
   <div class="col-md-4">
   <h1>ຟອມເພີ່ມປະເພດ</h1>
   <form  method="post">
@@ -76,31 +77,5 @@
 
 
 </div>
-
-<select name="catid" class="form-control">
-  <option>
-    ກະລຸນາເລືອກ
-  </option>
-
-  <?php
-        $sql = "SELECT * FROM category";
-        $rs = mysqli_query($con, $sql);
-        if(mysqli_num_rows($rs) == 0){
-          echo '<p class="text-danger">
-              ບໍ່ມີຂໍ້ມູນເດີ້.....
-          </p>';
-        }else{
-          while($data = mysqli_fetch_array($rs)):
-  ?>
-  <option value="<?php echo $data['catid']; ?>">
-    <?php echo $data['catname']; ?>
-  </option>
-  <?php
-endwhile;
-}
-   ?>
-
-</select>
-
 </body>
 </html>

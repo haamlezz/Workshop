@@ -24,6 +24,7 @@
 
 </head>
 <body>
+
 <div id="show">
 
 </div>
@@ -33,6 +34,7 @@
 ?>
 
 <div class="container">
+  <?php require 'menu.php';?>
   <h2>Products</h2>
   <table class="table table-striped table-bordered">
     <tr>
