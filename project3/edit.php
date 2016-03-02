@@ -1,11 +1,5 @@
-<?php include 'dbconfig.php'?>
-<!doctype HTML>
-<html>
-<head>
-<title>Product</title>
-<link href="bootstrap.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
+<?php include 'dbconfig.php';?>
+<?php require 'header.php';?>
 <?php
   $proid = filter_input(INPUT_GET, 'proid');
   $qry = "SELECT * FROM products WHERE proid = $proid";

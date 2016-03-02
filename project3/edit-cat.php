@@ -11,13 +11,8 @@
     header('Location: add_category.php');
   }
 ?>
-<!doctype HTML>
-<html>
-<head>
-<title>Product</title>
-<link href="bootstrap.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
+<?php require 'header.php';?>
+
 <div class="container">
   <?php
     $catid = filter_input(INPUT_GET, 'catid');

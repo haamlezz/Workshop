@@ -1,29 +1,5 @@
-<?php include 'dbconfig.php'?>
-<!doctype HTML>
-<html>
-<head>
-<title>Product</title>
-<link href="bootstrap.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript">
-  function Delete(proid){
-    //alert(proid);
-    var req = new XMLHttpRequest();
-
-    var url = "delete.php?proid=" + proid;
-
-    req.open("GET",url, true);
-    req.send(null);
-
-    req.onreadystatechange = function(){
-      if(req.readyState === 4){
-        document.getElementById("show").innerHTML = req.responseText;
-      }
-    };
-  }
-</script>
-
-</head>
-<body>
+<?php include 'dbconfig.php';?>
+<?php require 'header.php';?>
 
 <div id="show">
 
@@ -34,7 +10,8 @@
 ?>
 
 <div class="container">
-  <?php require 'menu.php';?>
+<?php require 'menu.php';?>
+
   <h2>Products</h2>
   <table class="table table-striped table-bordered">
     <tr>

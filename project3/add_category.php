@@ -6,16 +6,10 @@
     mysqli_query($con, $sql);
   }
 ?>
-<!doctype HTML>
-<html>
-<head>
-<title>Product</title>
-<link href="bootstrap.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-  <?php require 'menu.php';?>
-<div class="container">
+<?php require 'header.php';?>
 
+<div class="container">
+<?php require 'menu.php';?>
 <div class="row">
   <div class="col-md-4">
   <h1>ຟອມເພີ່ມປະເພດ</h1>
@@ -30,6 +24,7 @@
 
   <!-- ສະແດງປະເພດ -->
   <div class="col-md-8">
+
   <h1>ປະເພດທັງໝົດ</h1>
   <table class="table table-hover table-striped">
     <tr>

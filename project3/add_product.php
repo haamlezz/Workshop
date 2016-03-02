@@ -1,11 +1,5 @@
 <?php include 'dbconfig.php';?>
-<!doctype HTML>
-<html>
-<head>
-<title>Product</title>
-<link href="bootstrap.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
+<?php require 'header.php';?>
 
 <div class="container">
   <?php require 'menu.php';?>
