@@ -1,6 +1,6 @@
 body{
 	margin: auto;
-	font-family:Arial;
+	font-family:'Phetsarath OT';
 }
 
 /* ສ່ວນຫຼັກ */
@@ -21,8 +21,22 @@ body{
 	line-height:150px;
 }
 
-.logo{
-	background-image:URL("logo.png");
-	width:200px;
-	height:200px;
+.login-form{
+	margin:auto;
+	width: 500px;
+	text-align: center;
+	background-color: #eee;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+
+.footer{
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	padding: 20px;
+}
+
+.error{
+	color: #ff0000;
 }

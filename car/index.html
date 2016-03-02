@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 1</title>
+	<script type="text/javascript" src="phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+function preload() {
+	game.load.spritesheet('ball', 'ball.png');
+	game.load.image('bg','background.jpg');
+	game.load.image('ground', 'platform.jpg');
+}
+
+function create() {
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+	game.add.sprite(0,0,'bg');//add background
+	var platforms = game.add.group();
+	platforms.enableBody = true;
+	var base = platforms.create(0, game.world.height -  40,'ground');
+	base.scale.setTo(2,2);
+	base.body.immovable = true;
+
+	//  Now let's create two ledges
+	 var ledge = platforms.create(400, 400, 'ground');
+
+	 ledge.body.immovable = true;
+
+	 ledge = platforms.create(-150, 250, 'ground');
+
+	 ledge.body.immovable = true;
+
+
+	ball = game.add.sprite(100, game.world.height - 150,'ball');
+
+	game.physics.arcade.enable(ball);
+
+	ball.body.bounce.y = 0.2;
+  ball.body.gravity.y = 150;
+  ball.body.collideWorldBounds = true;
+}
+
+function update() {
+	cursors = game.input.keyboard.createCursorKeys();
+	game.physics.arcade.collide(ball, platforms);
+
+	ball.body.velocity.x = 0;
+
+	if (cursors.left.isDown)
+    {
+        //  Move to the left
+        ball.body.velocity.x = -200;
+    }
+		else if (cursors.right.isDown)
+    {
+        //  Move to the right
+        ball.body.velocity.x = 200;
+
+    }
+    else
+    {
+        //  Stand still
+        ball.frame = 4;
+    }
+
+		if (cursors.up.isDown && ball.body.touching.down)
+    {
+        ball.body.velocity.y = -250;
+    }
+}
+
+</script>
+
+</body>
+</html>

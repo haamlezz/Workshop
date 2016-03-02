@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,7 +11,7 @@
 			<label>User</label>
 			<input type="text" name="username" />
 			<label>Password<label>
-			<input type="password" name="password" />
+			<input type="password" name="pw" />
 			<input type="submit" value="Login" />
 		</form>
 	</body>
