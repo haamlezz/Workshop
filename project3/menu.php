@@ -13,5 +13,8 @@
       <li>
         <a href="add_category.php">ລູກຄ້າທັງໝົດ</a>
       </li>
+      <li>
+        <a href="add_category.php">ອອກຈາກລະບົບ</a>
+      </li>
     </ul>
   </nav>

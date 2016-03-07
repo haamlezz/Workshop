@@ -1,3 +1,20 @@
 *{
   font-family: 'Phetsarath OT';
 }
+
+.header{
+  background-color:rgb(170, 241, 249) ;
+  text-align: center;
+
+}
+
+.header h1{
+  line-height: 150px;
+}
+.footer{
+  background-color: rgb(172, 172, 172);
+  height: 100px;
+  text-align: center;
+  padding-top:30px;
+  
+}
